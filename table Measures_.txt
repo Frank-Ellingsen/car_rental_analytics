@@ -1,0 +1,358 @@
+table Measures_
+	lineageTag: 35d08895-cc8e-4bb3-b5ce-4f0dd59037c0
+
+	measure 'Total Rentals Previous Month' =
+    		CALCULATE([Total Rentals], DATEADD('dim_date'[Date], -1, MONTH))
+
+	measure 'Total Rentals MoM' =
+    		[Total Rentals] - [Total Rentals Previous Month]
+
+	measure 'Total Rentals MoM %' =
+    		DIVIDE([Total Rentals] - [Total Rentals Previous Month], [Total Rentals Previous Month])
+
+	measure 'Total Rentals Last Year' =
+    		CALCULATE([Total Rentals], DATEADD('dim_date'[Date], -1, YEAR))
+
+	measure 'Total Rentals YoY' =
+    		[Total Rentals] - [Total Rentals Last Year]
+
+	measure 'Total Rentals YoY %' =
+    		DIVIDE([Total Rentals] - [Total Rentals Last Year], [Total Rentals Last Year])
+
+	measure 'Total Rentals' = COUNTROWS(fact_Rentals)
+		formatString: 0
+		lineageTag: 0d197bfb-735f-4a30-b5cc-2659f129df16
+
+	measure 'Total Revenue' = SUM(fact_Rentals[TotalAmount])
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: 70beae3f-93ac-4e6c-b0fa-17f6135da07b
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Total Discounts' = SUM(fact_Rentals[DiscountAmount])
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: aef5079a-aacb-4f55-956b-53bed7fa4984
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Total Tax' = SUM(fact_Rentals[TaxAmount])
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: 3bf46b6c-4967-461c-a707-a6ddc57dd488
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Net Revenue' = [Total Revenue] - [Total Discounts] - [Total Tax]
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: f97d8daa-fe0f-4155-8923-ab41b6104fa1
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Average Daily Rate' = DIVIDE([Total Revenue], SUM(fact_rentals[RentalDays]))
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: f6ca3d4d-eec4-4c17-9952-111a7979ce82
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Average Rental Duration' = AVERAGE(fact_Rentals[RentalDays])
+		lineageTag: a9c2cf16-7f94-41cd-b1f4-ec87ebb683ba
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Maintenance Cost' =
+			
+			SUM(fact_Maintenance[Cost])
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: 67b79de2-f2b1-466e-b947-4580d86fafba
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Fleet Utilization %' = ```
+			
+			DIVIDE(
+			    CALCULATE(DISTINCTCOUNT(fact_rentals[VehicleID]), 
+			              fact_rentals[StartDate] <= TODAY() && fact_rentals[EndDate] >= TODAY()),
+			    DISTINCTCOUNT(dim_vehicles[VehicleID])
+			) * 100
+			```
+		lineageTag: 5fa4b75b-cb9e-48a3-b8ea-69348212e954
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Revenue per Vehicle' =
+			
+			DIVIDE(SUM(fact_rentals[TotalAmount]), DISTINCTCOUNT(dim_vehicles[VehicleID]))
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 70386064-a060-4809-a5bb-8876a171830a
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Monthly Revenue' = ```
+			
+			CALCULATE([Total Revenue], 
+			    MONTH(fact_rentals[StartDate]) = MONTH(TODAY()) &&
+			    YEAR(fact_rentals[StartDate]) = YEAR(TODAY())
+			)
+			```
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: d5c33b04-f2ca-4b30-8973-38876a443610
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Active Fleet' = CALCULATE(COUNTROWS(dim_vehicles), dim_vehicles[Status] = "Available")
+		formatString: 0
+		lineageTag: f0ba0445-f3c4-43ac-86af-9fdcdfe5f8bc
+
+	measure 'Total Fleet Size' = COUNTROWS(dim_vehicles)
+		formatString: 0
+		lineageTag: f61b63d4-30a5-4a33-97be-63cb26b2fce3
+
+	measure 'Revenue Per Available Vehicle' =
+			
+			VAR TotalVehicleDays = [Total Fleet Size] * 365
+			RETURN DIVIDE([Total Revenue], TotalVehicleDays)
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 8447f9f6-af7a-46e5-83d3-55072a2262d5
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Average Transaction Value' = DIVIDE([Total Revenue], COUNTROWS(fact_rentals))
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: c8123be6-d449-4544-a66c-5633c8c4687e
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Base Revenue' = SUM(fact_rentals[DailyRate]) * SUM(fact_rentals[RentalDays])
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: f461401f-c03f-45ca-b30e-6b9709e67bb9
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Insurance Revenue' = SUM(fact_rentals[InsuranceAmount])
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: a97b2be4-652b-4123-a760-0c703cdd51e2
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Extra Fees Revenue' = SUM(fact_rentals[ExtraFees])
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 94d3f479-0345-4337-b7a2-fa3e72b95b23
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Discount Rate' = DIVIDE([Total Discounts], [Total Revenue] + [Total Discounts]) * 100
+		lineageTag: a1385680-62b4-4643-894c-79db1c0b22e5
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Maintenance Cost Per Vehicle' = DIVIDE([Maintenance Cost], [Total Fleet Size])
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: b8f3aa8c-dc47-48a4-bb31-a82369a60cfe
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Vehicle Depreciation' = ```
+			
+			SUMX(dim_vehicles, 
+			    dim_vehicles[PurchasePrice] * 0.20 // 20% annual depreciation
+			)
+			```
+		lineageTag: 38531098-acbe-4561-9d1f-66633211c243
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Profit = [Net Revenue] - [Maintenance Cost] - [Vehicle Depreciation]
+		formatString: 0.00
+		lineageTag: 3f2e1e8d-8ed9-4cb2-97df-69ab972d3902
+
+	measure Margin = DIVIDE([Profit], [Net Revenue]) * 100
+		lineageTag: 95cf7851-78c3-459d-962b-dcc0f379c47f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Paid Revenue' = CALCULATE([Total Revenue], fact_rentals[PaymentStatus] = "Paid")
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 5b18f39c-2b66-4492-812e-89f434c978e0
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Pending Revenue' = CALCULATE([Total Revenue], fact_rentals[PaymentStatus] = "Pending")
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 1a7513ac-371e-4f13-99ff-d682d3659301
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Payment Collection Rate' = DIVIDE([Paid Revenue], [Total Revenue]) * 100
+		lineageTag: 8977e6ad-a801-41e1-9372-d7ea3b99b884
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Vehicle Turnover Rate' = DIVIDE(COUNTROWS(fact_rentals), [Total Fleet Size])
+		lineageTag: d464cc81-0a88-4b44-bac8-5e0dfcc67d28
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Top 3 Location by Revenue' =
+			
+			CALCULATE(
+			    MAX(dim_locations[LocationName]),
+			    TOPN(3, dim_Locations, [Total Revenue], DESC)
+			)
+		lineageTag: a9a5c179-21ff-412a-a50a-00a8b67b163f
+
+	measure 'Overdue Returns' = ```
+			
+			CALCULATE(COUNTROWS(fact_Rentals),
+			    fact_rentals[ActualReturnDate] > fact_rentals[EndDate] ||
+			    (ISBLANK(fact_rentals[ActualReturnDate]) && 
+			     fact_rentals[EndDate] < TODAY() &&
+			     fact_rentals[Status] <> "Completed")
+			)
+			```
+		formatString: 0
+		lineageTag: 7911cb80-2e51-489d-b79d-b37a1f06fa83
+
+	measure 'On-Time Return Rate' = ```
+			
+			VAR OnTimeReturns = 
+			    CALCULATE(COUNTROWS(fact_rentals),
+			        fact_rentals[ActualReturnDate] <= fact_rentals[EndDate]
+			    )
+			VAR TotalReturns = 
+			    CALCULATE(COUNTROWS(fact_rentals),
+			        NOT ISBLANK(fact_rentals[ActualReturnDate])
+			    )
+			RETURN DIVIDE(OnTimeReturns, TotalReturns) * 100
+			```
+		lineageTag: 5dadaf6a-002a-4364-a442-f4ff26c5352e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Advance Booking Days' =
+			
+			AVERAGEX(fact_rentals,fact_rentals[StartDate] - fact_rentals[BookingDate])
+		lineageTag: 19c23c43-85c3-4c24-b01a-64c38be2745c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Available Count' = CALCULATE(COUNTROWS(dim_vehicles), dim_vehicles[Status] = "Available")
+		formatString: 0
+		lineageTag: d742928a-0eea-4f85-a1ac-f6bf5468e78f
+
+	measure 'Rented Count' = CALCULATE(COUNTROWS(dim_vehicles), dim_vehicles[Status] = "Rented")
+		formatString: 0
+		lineageTag: 17a96586-7a67-40a0-afa7-e61ec041b855
+
+	measure 'Maintenance Count' = CALCULATE(COUNTROWS(dim_vehicles), dim_vehicles[Status] = "Maintenance")
+		formatString: 0
+		lineageTag: 83ac8eb8-0cca-4333-99b4-ca178f370bf3
+
+	measure 'Out_of_Service Count' = CALCULATE(COUNTROWS(dim_vehicles), dim_vehicles[Status] = "Out of Service")
+		formatString: 0
+		lineageTag: 8b2767bf-a8c1-49f9-bf54-1f25568e217b
+
+	measure 'Total Revenue Previous Month' = ```
+			
+			CALCULATE(
+			    [Total Revenue],
+			    DATEADD('dim_date'[Date], -1, MONTH)
+			)
+			
+			```
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: 06dba61f-9959-48b1-8712-d9c8165bdbb3
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Total Revenue MoM' = ```
+			
+			[Total Revenue] - [Total Revenue Previous Month]
+			
+			```
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: 8bf2e623-ce0d-4fbb-adeb-e3f2f7f03923
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Total Revenue MoM %' = ```
+			
+			DIVIDE([Total Revenue] - [Total Revenue Previous Month], [Total Revenue Previous Month])
+			
+			```
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 79d6a46c-e42a-4290-910e-f503916124eb
+
+	measure 'Total Revenue Last Year' = ```
+			
+			CALCULATE(
+			    [Total Revenue],
+			    DATEADD('dim_date'[Date], -1, YEAR)
+			)
+			
+			```
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: bd081090-2205-4cf1-b1ee-73b7933ba73f
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Total Revenue YoY' = ```
+			
+			[Total Revenue] - [Total Revenue Last Year]
+			
+			```
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: ad72976d-15e0-41f7-b6a4-7cb7899fc7ef
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Total Revenue YoY %' = ```
+			
+			DIVIDE([Total Revenue] - [Total Revenue Last Year], [Total Revenue Last Year])
+			
+			```
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 958055b4-a9f8-43cf-aa52-1a350fd92680
+
+	measure 'Profit Previous Month' =
+			
+			CALCULATE(
+			    [Profit],
+			    DATEADD('dim_date'[Date], -1, MONTH)
+			)
+		formatString: 0.00
+		lineageTag: 4330b78d-d33e-4b90-931f-0e0ad997c52d
+
+	measure 'Profit MoM' =
+			
+			[Profit] - [Profit Previous Month]
+		lineageTag: 16082fdb-36a1-46dc-ab70-39040482371d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Profit MoM %' =
+			
+			DIVIDE([Profit] - [Profit Previous Month], [Profit Previous Month])
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: b9836fe8-400a-4402-9594-a87ccb6c0a8e
+
+	column Placeholder
+		isHidden
+		lineageTag: 8aa8d847-a350-4527-bb96-b6536cbbdd2c
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Placeholder]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Measures_ = calculated
+		mode: import
+		source = ```
+				
+				DATATABLE(
+				    "Placeholder", STRING,
+				    { { "Use this table to store all measures" } }
+				)
+				
+				```
+
+	annotation PBI_Id = 6348733ecf3547d783ff001e5389c2ff
+
