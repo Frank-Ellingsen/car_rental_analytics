@@ -1,0 +1,80 @@
+﻿LocationID,LocationName,LocationType,Address,City,PostalCode,Region,Country,Phone,Email,IsActive,OpeningHours,Latitude,Longitude,CreatedDate,ModifiedDate
+1,Oslo Lufthavn Gardermoen,Airport,Edvard Munchs veg 1,Gardermoen,2061,Østlandet,Norway,+47 67 03 10 00,gardermoen@sixt.no,1,06:00-23:00,60.19390000,11.10040000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+2,Bergen Lufthavn Flesland,Airport,Flyplassvegen 555,Bergen,5869,Vestlandet,Norway,+47 55 99 31 00,bergen.lufthavn@sixt.no,1,06:00-23:00,60.29340000,5.21810000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+3,Stavanger Lufthavn Sola,Airport,Flyplassvegen 230,Sola,4055,Vestlandet,Norway,+47 51 65 81 00,sola@sixt.no,1,06:00-23:00,58.87670000,5.63780000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+4,Trondheim Lufthavn Værnes,Airport,Flyplassvegen 1,Stjørdal,7500,Trøndelag,Norway,+47 74 84 30 00,vaernes@sixt.no,1,06:00-23:00,63.45780000,10.92390000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+5,Kristiansand Lufthavn Kjevik,Airport,Kjøita 40,Kristiansand,4630,Sørlandet,Norway,+47 38 06 19 00,kjevik@sixt.no,1,06:00-22:00,58.20420000,8.08440000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+6,Oslo Sentrum,City Center,Karl Johans gate 14,Oslo,0154,Østlandet,Norway,+47 22 17 50 00,oslo.sentrum@sixt.no,1,07:00-19:00,59.91390000,10.75220000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+7,Bergen Sentrum,City Center,Torgallmenningen 8,Bergen,5014,Vestlandet,Norway,+47 55 31 44 00,bergen.sentrum@sixt.no,1,08:00-18:00,60.39130000,5.32210000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+8,Stavanger Sentrum,City Center,Kirkegata 15,Stavanger,4006,Vestlandet,Norway,+47 51 89 26 00,stavanger.sentrum@sixt.no,1,08:00-18:00,58.97000000,5.73310000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+9,Trondheim Sentrum,City Center,Munkegata 35,Trondheim,7011,Trøndelag,Norway,+47 73 87 10 00,trondheim.sentrum@sixt.no,1,08:00-18:00,63.43050000,10.39510000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+10,Kristiansand Sentrum,City Center,Markens gate 8,Kristiansand,4611,Sørlandet,Norway,+47 38 02 68 00,kristiansand.sentrum@sixt.no,1,08:00-18:00,58.14670000,7.99560000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+11,Tromsø Lufthavn,Airport,Flyplassvegen 31,Tromsø,9016,Nord-Norge,Norway,+47 77 64 84 00,tromso.lufthavn@sixt.no,1,06:00-22:00,69.68330000,18.91890000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+12,Bodø Lufthavn,Airport,Olav V gate 1,Bodø,8003,Nord-Norge,Norway,+47 75 51 35 00,bodo@sixt.no,1,07:00-20:00,67.26920000,14.36530000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+13,Ålesund Lufthavn Vigra,Airport,Flyplassvegen 1,Ålesund,6040,Vestlandet,Norway,+47 70 18 42 00,alesund@sixt.no,1,07:00-21:00,62.56030000,6.11970000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+14,Haugesund Lufthavn Karmøy,Airport,Flyplassvegen 1,Haugesund,5583,Vestlandet,Norway,+47 52 71 25 00,haugesund@sixt.no,1,07:00-20:00,59.34530000,5.20860000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+15,Molde Lufthavn Årø,Airport,Flyplassvegen 1,Molde,6421,Vestlandet,Norway,+47 71 20 28 00,molde@sixt.no,1,07:00-19:00,62.74470000,7.26250000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+16,Drammen,Standard,Bragernes Torg 2,Drammen,3017,Østlandet,Norway,+47 32 89 17 00,drammen@sixt.no,1,08:00-17:00,59.74390000,10.20450000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+17,Lillehammer,Standard,Storgata 108,Lillehammer,2609,Østlandet,Norway,+47 61 26 75 00,lillehammer@sixt.no,1,08:00-17:00,61.11530000,10.46620000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+18,Hamar,Standard,Torggata 69,Hamar,2317,Østlandet,Norway,+47 62 53 18 00,hamar@sixt.no,1,08:00-17:00,60.79450000,11.06800000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+19,Gjøvik,Standard,Jernbanegata 6,Gjøvik,2815,Østlandet,Norway,+47 61 17 19 00,gjovik@sixt.no,1,08:00-16:00,60.79570000,10.69150000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+20,Kongsberg,Standard,Storgata 35,Kongsberg,3611,Østlandet,Norway,+47 32 76 14 00,kongsberg@sixt.no,1,08:00-16:00,59.66860000,9.65170000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+21,Tønsberg,Standard,Storgata 17,Tønsberg,3126,Østlandet,Norway,+47 33 31 02 00,tonsberg@sixt.no,1,08:00-17:00,59.26740000,10.40780000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+22,Fredrikstad,Standard,Nygaardsgata 50,Fredrikstad,1607,Østlandet,Norway,+47 69 38 10 00,fredrikstad@sixt.no,1,08:00-17:00,59.21810000,10.92980000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+23,Sarpsborg,Standard,Borgengata 5,Sarpsborg,1724,Østlandet,Norway,+47 69 15 78 00,sarpsborg@sixt.no,1,08:00-16:00,59.28390000,11.10940000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+24,Moss,Standard,Fleischer gate 8,Moss,1532,Østlandet,Norway,+47 69 25 32 00,moss@sixt.no,1,08:00-17:00,59.43690000,10.65640000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+25,Sandefjord,Standard,Jernbanealleen 33,Sandefjord,3210,Østlandet,Norway,+47 33 44 75 00,sandefjord@sixt.no,1,08:00-17:00,59.13110000,10.21670000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+26,Florø,Standard,Markegata 43,Florø,6900,Vestlandet,Norway,+47 57 74 22 00,floro@sixt.no,1,08:00-16:00,61.60140000,5.03280000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+27,Førde,Standard,Hafstadgata 39,Førde,6800,Vestlandet,Norway,+47 57 82 13 00,forde@sixt.no,1,08:00-16:00,61.45610000,5.85810000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+28,Sogndal,Standard,Gravensteinsgata 9,Sogndal,6856,Vestlandet,Norway,+47 57 62 77 00,sogndal@sixt.no,1,08:00-16:00,61.23060000,7.09970000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+29,Stryn,Standard,Tonningsgata 1,Stryn,6783,Vestlandet,Norway,+47 57 87 30 00,stryn@sixt.no,1,08:00-16:00,61.91110000,6.71390000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+30,Volda,Standard,Ørsta-Volda veg 1,Volda,6100,Vestlandet,Norway,+47 70 07 42 00,volda@sixt.no,1,08:00-16:00,62.14860000,6.07110000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+31,Steinkjer,Standard,Kongens gate 40,Steinkjer,7713,Trøndelag,Norway,+47 74 16 32 00,steinkjer@sixt.no,1,08:00-16:00,64.01580000,11.49530000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+32,Levanger,Standard,Sjøgata 36,Levanger,7600,Trøndelag,Norway,+47 74 08 77 00,levanger@sixt.no,1,08:00-16:00,63.74560000,11.30080000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+33,Verdal,Standard,Rådhusgata 8,Verdal,7650,Trøndelag,Norway,+47 74 07 70 00,verdal@sixt.no,1,08:00-16:00,63.79250000,11.47190000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+34,Namsos,Standard,Skolegata 18,Namsos,7800,Trøndelag,Norway,+47 74 21 58 00,namsos@sixt.no,1,08:00-16:00,64.46610000,11.49580000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+35,Oppdal,Standard,Drivstuguvegen 2,Oppdal,7340,Trøndelag,Norway,+47 72 40 04 00,oppdal@sixt.no,1,08:00-16:00,62.59530000,9.68890000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+36,Narvik,Standard,Kongens gate 64,Narvik,8514,Nord-Norge,Norway,+47 76 94 14 00,narvik@sixt.no,1,08:00-16:00,68.43840000,17.42720000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+37,Harstad,Standard,Torvet 8,Harstad,9405,Nord-Norge,Norway,+47 77 00 35 00,harstad@sixt.no,1,08:00-16:00,68.79890000,16.54110000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+38,Alta,Standard,Markveien 57,Alta,9510,Nord-Norge,Norway,+47 78 44 50 00,alta@sixt.no,1,08:00-16:00,69.96890000,23.27170000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+39,Hammerfest,Standard,Strandgata 15,Hammerfest,9600,Nord-Norge,Norway,+47 78 42 57 00,hammerfest@sixt.no,1,08:00-16:00,70.66340000,23.68210000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+40,Kirkenes,Standard,Presteveien 1,Kirkenes,9900,Nord-Norge,Norway,+47 78 97 05 00,kirkenes@sixt.no,1,08:00-16:00,69.72670000,30.04500000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+41,Arendal,Standard,Langbrygga 6,Arendal,4836,Sørlandet,Norway,+47 37 00 55 00,arendal@sixt.no,1,08:00-17:00,58.46170000,8.77220000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+42,Grimstad,Standard,Storgata 1,Grimstad,4876,Sørlandet,Norway,+47 37 25 45 00,grimstad@sixt.no,1,08:00-16:00,58.34030000,8.59330000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+43,Mandal,Standard,Elvegata 7,Mandal,4515,Sørlandet,Norway,+47 38 27 83 00,mandal@sixt.no,1,08:00-16:00,58.02970000,7.45810000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+44,Flekkefjord,Standard,Elvegata 47,Flekkefjord,4400,Sørlandet,Norway,+47 38 32 26 00,flekkefjord@sixt.no,1,08:00-16:00,58.29750000,6.66080000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+45,Lyngdal,Standard,Audnedalsveien 1,Lyngdal,4580,Sørlandet,Norway,+47 38 34 10 00,lyngdal@sixt.no,1,08:00-16:00,58.12640000,7.04530000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+46,Larvik,Standard,Storgata 48,Larvik,3256,Østlandet,Norway,+47 33 13 09 00,larvik@sixt.no,1,08:00-17:00,59.05220000,10.03470000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+47,Porsgrunn,Standard,Storgata 135,Porsgrunn,3915,Østlandet,Norway,+47 35 55 21 00,porsgrunn@sixt.no,1,08:00-17:00,59.14030000,9.65440000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+48,Skien,Standard,Kongens gate 7,Skien,3717,Østlandet,Norway,+47 35 90 60 00,skien@sixt.no,1,08:00-17:00,59.20890000,9.60670000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+49,Notodden,Standard,Heddalsveien 2,Notodden,3674,Østlandet,Norway,+47 35 01 59 00,notodden@sixt.no,1,08:00-16:00,59.56080000,9.25940000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+50,Rjukan,Standard,Torget 2,Rjukan,3660,Østlandet,Norway,+47 35 08 10 00,rjukan@sixt.no,1,08:00-16:00,59.87810000,8.59360000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+51,Kragerø,Standard,Markveien 6,Kragerø,3770,Sørlandet,Norway,+47 35 98 88 00,kragero@sixt.no,1,08:00-16:00,58.86970000,9.41280000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+52,Risør,Standard,Strandgata 15,Risør,4950,Sørlandet,Norway,+47 37 15 14 00,risor@sixt.no,1,08:00-16:00,58.72030000,9.23310000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+53,Tvedestrand,Standard,Havnegata 2,Tvedestrand,4900,Sørlandet,Norway,+47 37 16 12 00,tvedestrand@sixt.no,1,08:00-16:00,58.62470000,8.93060000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+54,Lillesand,Standard,Strandgata 31,Lillesand,4790,Sørlandet,Norway,+47 37 27 01 00,lillesand@sixt.no,1,08:00-16:00,58.25250000,8.37110000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+55,Vennesla,Standard,Setesdalsveien 1,Vennesla,4700,Sørlandet,Norway,+47 38 15 90 00,vennesla@sixt.no,1,08:00-16:00,58.27640000,7.95530000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+56,Oslo Fornebu Premium,Premium,Snarøyveien 36,Fornebu,1364,Østlandet,Norway,+47 67 12 90 00,fornebu.premium@sixt.no,1,07:00-20:00,59.89500000,10.61810000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+57,Bergen Kokstad Premium,Premium,Kokstadveien 23,Bergen,5257,Vestlandet,Norway,+47 55 92 10 00,kokstad.premium@sixt.no,1,08:00-19:00,60.33720000,5.36810000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+58,Stavanger Forus Premium,Premium,Forusveien 15,Stavanger,4033,Vestlandet,Norway,+47 51 70 88 00,forus.premium@sixt.no,1,08:00-19:00,58.91810000,5.76810000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+59,Trondheim Lade Premium,Premium,Ladeveien 50,Trondheim,7041,Trøndelag,Norway,+47 73 88 45 00,lade.premium@sixt.no,1,08:00-18:00,63.44610000,10.46810000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+60,Elverum,Standard,Storgata 31,Elverum,2408,Østlandet,Norway,+47 62 41 77 00,elverum@sixt.no,1,08:00-16:00,60.88110000,11.56440000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+61,Brumunddal,Standard,Stangevegen 2,Brumunddal,2380,Østlandet,Norway,+47 62 94 15 00,brumunddal@sixt.no,1,08:00-16:00,60.88330000,10.91670000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+62,Hønefoss,Standard,Osloveien 1,Hønefoss,3511,Østlandet,Norway,+47 32 12 17 00,honefoss@sixt.no,1,08:00-16:00,60.16810000,10.25970000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+63,Jessheim,Standard,Storgata 25,Jessheim,2050,Østlandet,Norway,+47 63 97 70 00,jessheim@sixt.no,1,08:00-17:00,60.13940000,11.17560000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+64,Ski,Standard,Storgata 15,Ski,1400,Østlandet,Norway,+47 64 91 05 00,ski@sixt.no,1,08:00-17:00,59.71810000,10.83610000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+65,Askim,Standard,Rådhusgata 9,Askim,1813,Østlandet,Norway,+47 69 81 11 00,askim@sixt.no,1,08:00-16:00,59.58330000,11.16670000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+66,Mysen,Standard,Storgata 7,Mysen,1850,Østlandet,Norway,+47 69 89 42 00,mysen@sixt.no,1,08:00-16:00,59.55560000,11.31810000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+67,Halden,Standard,Storgata 12,Halden,1776,Østlandet,Norway,+47 69 19 09 00,halden@sixt.no,1,08:00-16:00,59.12440000,11.38750000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+68,Ørje,Standard,Storgata 3,Ørje,1870,Østlandet,Norway,+47 69 81 42 00,orje@sixt.no,1,08:00-16:00,59.61670000,11.68330000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+69,Rakkestad,Standard,Storgata 18,Rakkestad,1890,Østlandet,Norway,+47 69 22 78 00,rakkestad@sixt.no,1,08:00-16:00,59.41670000,11.35000000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+70,Spydeberg,Standard,Storgata 21,Spydeberg,1820,Østlandet,Norway,+47 69 83 11 00,spydeberg@sixt.no,1,08:00-16:00,59.60000000,11.06670000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+71,Geiranger,Standard,Geirangerveien 1,Geiranger,6216,Vestlandet,Norway,+47 70 26 30 00,geiranger@sixt.no,1,09:00-17:00,62.10140000,7.20690000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+72,Flåm,Standard,Flåmsvegen 32,Flåm,5742,Vestlandet,Norway,+47 57 63 21 00,flam@sixt.no,1,09:00-17:00,60.86310000,7.11360000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+73,Lom,Standard,Sognefjellsvegen 3,Lom,2686,Østlandet,Norway,+47 61 21 29 00,lom@sixt.no,1,09:00-16:00,61.83610000,8.56810000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+74,Røros,Standard,Bergmannsgata 13,Røros,7374,Trøndelag,Norway,+47 72 41 11 00,roros@sixt.no,1,09:00-16:00,62.57440000,11.38810000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+75,Honningsvåg,Standard,Nordkappgata 4,Honningsvåg,9750,Nord-Norge,Norway,+47 78 47 25 00,honningsvag@sixt.no,1,09:00-16:00,70.98220000,25.97060000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+76,Longyearbyen,Standard,Lompensenteret,Longyearbyen,9170,Nord-Norge,Norway,+47 79 02 13 00,longyearbyen@sixt.no,1,10:00-16:00,78.22320000,15.62670000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+77,Vadsø,Standard,Storgata 16,Vadsø,9800,Nord-Norge,Norway,+47 78 94 69 00,vadso@sixt.no,1,08:00-16:00,70.07440000,29.74890000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+78,Vardø,Standard,Strandgata 32,Vardø,9950,Nord-Norge,Norway,+47 78 98 77 00,vardo@sixt.no,1,08:00-16:00,70.37060000,31.10890000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
+79,Båtsfjord,Standard,Havnegata 12,Båtsfjord,9990,Nord-Norge,Norway,+47 78 98 51 00,batsfjord@sixt.no,1,08:00-16:00,70.63330000,29.71670000,2026-02-18 20:37:26.7133333,2026-02-18 20:37:26.7133333
